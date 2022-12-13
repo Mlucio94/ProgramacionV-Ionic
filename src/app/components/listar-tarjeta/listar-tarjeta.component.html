@@ -1,0 +1,29 @@
+<div class="card p-2 bg-secondary bg-gradient" style="max-height: 500px;">
+  <div class="">
+      <div class="input-group rounded ">
+          <h5 class="titulo mr-4">Listado de Clientes</h5>
+         
+              <input [(ngModel)] = "filterPost" name = "filtarPost" type="search" id="filtro" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          
+      </div>
+      <div style="overflow-y: scroll ; max-height: 400px; ">
+        <table class="table  table-dark table-striped " >
+       
+            <tr *ngFor="let tarjeta of listTarjetas | filter: filterPost">
+              <td>
+                <div>{{ tarjeta.titular.toUpperCase().substring(0,15) }}</div>
+                <div>{{ tarjeta.numeroTarjeta }}</div>
+              </td>
+              <td>{{ tarjeta.fechaExpiracion }}</td>
+              <td> 
+                  <i  (click)="editarTarjeta(tarjeta)" class="far fa-edit text-info mr-2"></i>
+                  <i (click)="eliminarTarjeta(tarjeta.id)" class="far fa-trash-alt text-danger"></i>
+              </td>
+            </tr>         
+        </table>
+
+      </div>
+
+
+  </div>
+</div>

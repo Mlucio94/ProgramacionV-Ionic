@@ -1,0 +1,46 @@
+<div class="card p-2 bg-secondary bg-gradient">
+  <div class="">
+      <h5 class="mb-3">{{titulo | uppercase}}
+          <div *ngIf="loading" class="spinner-grow float-end" role="status">
+          </div>
+      </h5>
+      <form [formGroup]="form" (ngSubmit)="guardarTarjeta()">
+          <div class="input-group mb-3">
+              <span class="input-group-text">
+                  <i class="fa-solid fa-circle-user"></i>
+              </span>
+              <input type="text" formControlName="titular" class="form-control" maxlength="25" placeholder="Titular"> 
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                  <i class="fa-solid fa-credit-card"></i>
+              </span>
+              <input type="text" formControlName="numeroTarjeta" class="form-control" maxlength="16" placeholder="Numero de Tarjeta">
+            </div>
+            
+              <div class="row">
+                  <div class="col-lg-7">
+                      <div class="input-group input-group-lg mb-3">
+                          <span class="input-group-text">
+                              <i class="fa-solid fa-calendar-alt"></i>
+                          </span>
+                          <input type="text" formControlName="fechaExpiracion" class="form-control" maxlength="5" placeholder="MM/AA">
+                      </div>
+                  </div>
+                                  
+                  <div class="col-lg-5">
+                      <div class="input-group input-group-lg mb-3">
+                          <span class="input-group-text">
+                              <i class="fa-solid fa-key"></i>
+                          </span>
+                          <input type="password" formControlName="cvv" class="form-control" maxlength="3" placeholder="CVV">
+                      </div>
+                  </div>
+              </div>
+              <div class="span2"> 
+                  <button class="btn btn-success btn-block" type="submit">Aceptar</button>
+              </div>
+      </form>
+  </div>
+</div>
