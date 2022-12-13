@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tarjetacredito-78f18": {
+      "hosting": {
+        "app": [
+          "tarjetacreditoionic"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tarjetacredito-78f18"
+  }
+}

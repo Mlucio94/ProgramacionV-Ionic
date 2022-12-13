@@ -1,0 +1,7 @@
+{
+  "name": "ProgramacionV-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
